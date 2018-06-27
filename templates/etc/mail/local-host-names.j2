@@ -1,0 +1,4 @@
+{{ ansible_managed|comment }}
+{% for item in sendmail_accept_mail_for %}
+{{ item }}
+{% endfor %}

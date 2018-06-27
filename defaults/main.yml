@@ -1,0 +1,10 @@
+---
+# defaults file for ansible-sendmail
+sendmail_accept_mail_for:
+  - localhost
+  - "{{ ansible_hostname }}"
+  - "{{ sendmail_pri_domain }}"
+
+sendmail_config: true
+
+sendmail_pri_domain: vagrant.local

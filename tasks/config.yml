@@ -1,0 +1,11 @@
+---
+- name: config | Configuring Domains To Accept Mail For
+  template:
+    src: etc/mail/local-host-names.j2
+    dest: /etc/mail/local-host-names
+    owner: root
+    group: smmsp
+    mode: u=rw,g=r,o=r
+  become: true
+  notify:
+    - restart sendmail

@@ -1,0 +1,6 @@
+---
+- name: debian | Installing sendmail
+  apt:
+    name: sendmail
+    state: present
+  become: true
